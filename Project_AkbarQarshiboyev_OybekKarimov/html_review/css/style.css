@@ -255,3 +255,156 @@ footer p {
         flex-direction: column;
     }
 }
+
+/* ==============================
+   QUIZ PAGE
+   ============================== */
+
+.quiz-question {
+    margin-bottom: 25px;
+}
+
+
+/* Quiz answer choices */
+
+.tag-card label {
+    display: block;
+    font-weight: normal;
+    background-color: #f8fafc;
+    border: 1px solid #dbe3ec;
+    padding: 12px 15px;
+    margin: 8px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tag-card label:hover {
+    background-color: #eef6ff;
+    border-color: #2563eb;
+}
+
+
+/* Radio buttons */
+
+.tag-card input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+    cursor: pointer;
+    accent-color: #2563eb;
+}
+
+
+/* Selected answer */
+
+.tag-card label:has(input[type="radio"]:checked) {
+    background-color: #dbeafe;
+    border-color: #2563eb;
+    color: #1d4ed8;
+}
+
+
+/* Quiz buttons */
+
+button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+button[type="button"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+}
+
+
+/* Reset button */
+
+button:last-of-type {
+    background-color: #7c3aed;
+}
+
+button:last-of-type:hover {
+    background-color: #6d28d9;
+}
+
+
+/* Quiz result */
+
+#quiz-result {
+    margin-top: 25px;
+    text-align: center;
+    min-height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#quiz-result h3 {
+    color: #2563eb;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+#quiz-result p {
+    margin: 5px 0;
+}
+
+
+/* Quiz introduction */
+
+.intro p {
+    margin-bottom: 8px;
+}
+
+
+/* Improve question cards */
+
+.tag-card > p {
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+
+/* Quiz card hover effect */
+
+.tag-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tag-card:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10);
+}
+
+
+/* Submit section */
+
+.tag-card button:first-of-type {
+    background-color: #2563eb;
+}
+
+.tag-card button:first-of-type:hover {
+    background-color: #1d4ed8;
+}
+
+
+/* Mobile quiz styling */
+
+@media (max-width: 700px) {
+
+    .tag-card label {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    button {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    #quiz-result h3 {
+        font-size: 20px;
+    }
+}
